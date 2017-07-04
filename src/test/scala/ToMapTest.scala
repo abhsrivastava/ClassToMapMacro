@@ -10,8 +10,9 @@ class ToMapTest extends FunSuite with Matchers {
       case class Person(name: String, age: Int)
       val x = Person("foo", 20)
       val map = x.toMap()
+      println(map)
       map.get("name") should equal (Some("foo"))
-      map.get("age") should equal (Some(20))
+      map.get("age") should equal (Some("20"))
       map.get("foo") should not be ('defined)
    }
 }
